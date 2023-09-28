@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionals</title>
+</head>
+<body>
+<p th:if="${cond > 50}">
+  Sales are good!
+</p>
+<p th:unless="${cond > 50}">
+  Sales are bad!
+</p>
+<p th:text="${cond > 50} ? 'It\'s good' : 'It\'s bad'">
+</p>
+<div th:switch="${product}">
+  <p th:case="'chair'">50</p>
+  <p th:case="'tv'">150</p>
+  <p th:case="*">no match</p>
+</div>
+</body>
+</html>

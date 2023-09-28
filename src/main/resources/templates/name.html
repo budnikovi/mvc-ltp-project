@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My name</title>
+</head>
+<body>
+<p style="font-weight: bold" th:text="${myName}"></p>
+<ul>
+  <li th:text="${#strings.substring(myName,0,1)}"></li>
+  <li th:text="${#strings.substring(myName,1,2)}"></li>
+  <li th:text="${#strings.substring(myName,2,3)}"></li>
+  <li th:text="${#strings.substring(myName,3,4)}"></li>
+</ul>
+</body>
+</html>

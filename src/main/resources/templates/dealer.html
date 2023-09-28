@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DealerCenter</title>
+</head>
+<body>
+    <div th:if="${budget > 5000}" th:switch="${make}">
+        <p th:case="'toyota'" th:text="${toyota.name} + ': ' + '$' + ${toyota.value}"> </p>
+        <p th:case="'volkswagen'" th:text="${volkswagen.name} + ': ' + '$' + ${volkswagen.value}"> </p>
+        <p th:case="'ford'" th:text="${ford.name} + ': ' + '$' + ${ford.value}"> </p>
+        <p th:case="'honda'" th:text="${honda.name} + ': ' + '$' + ${honda.value}"> </p>
+        <p th:case="*">No cars match your query.</p>
+    </div>
+    <p th:unless="${budget > 5000}">Sorry, we don't have any cars below $5,000</p>
+</body>
+</html>

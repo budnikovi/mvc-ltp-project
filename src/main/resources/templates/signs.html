@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signs</title>
+</head>
+<body>
+    <img th:if="${sign<60}" src="img/fast.png" alt="fast"/>
+    <img th:unless="${sign<60}" src="img/slow.png" alt="slow"/>
+    <img th:src="${sign>60} ? 'img/slow.png' : 'img/fast.png' "/>
+    <div th:switch="${sign}">
+        <p th:case="'40'"> Good! </p>
+        <p th:case="'100'"> It's bad my man </p>
+        <p th:case="*"> Don't recognize </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shows</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            font-size: 16px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        tr.bold-row th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h2>IMDB: Top 5 Episodes</h2>
+<table>
+    <tr class="bold-row">
+        <th> Title</th>
+        <th>Episode</th>
+        <th>Rating</th>
+    </tr>
+    <tr>
+        <td th:text="${bb.title}"></td>
+        <td th:text="${bb.episode}"></td>
+        <td th:text="${bb.rating}"></td>
+    </tr>
+    <tr>
+        <td th:text="${aot1.title}"></td>
+        <td th:text="${aot1.episode}"></td>
+        <td th:text="${aot1.rating}"></td>
+    </tr>
+    <tr>
+        <td th:text="${aot2.title}"></td>
+        <td th:text="${aot2.episode}"></td>
+        <td th:text="${aot2.rating}"></td>
+    </tr>
+
+    <tr>
+        <td th:text="${sw.title}"></td>
+        <td th:text="${sw.episode}"></td>
+        <td th:text="${sw.rating}"></td>
+    </tr>
+
+    <tr>
+        <td th:text="${mr.title}"></td>
+        <td th:text="${mr.episode}"></td>
+        <td th:text="${mr.rating}"></td>
+    </tr>
+</table>
+</body>
+</html>
